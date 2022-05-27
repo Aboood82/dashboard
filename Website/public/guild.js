@@ -1,5 +1,3 @@
-// const { isModuleNamespaceObject } from 'util/types';
-
 const fs = require('fs');
 const client = require('../../index.js');
 const schema = require('../../dashboard/dashboard');
@@ -12,7 +10,7 @@ module.exports = {
  name: "/servers/:id",
 run: async(req, res) => {
     let gId = req.params.id;
-    delete require.cache[require.resolve('../html/guild.ejs')];
+    delete require.cache[require.resolve('../html/server.ejs')];
     if (!req.cookies.token)
         res.redirect('/login');
     let decoded;
@@ -40,14 +38,13 @@ run: async(req, res) => {
                 } else {
                     g.avatar = `https://cdn.discordapp.com/icons/${g.id}/${g.icon}.png`;
                 }
-                // console.log(data.userID)
+
                 let user = guildd.members.cache.get(data.userID);
-                // console.log(user.username)
+              if (user !== undefined) {
                 if (user.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {
-                    // console.log("checking")
                  mutualArray.push(g);
                 }
-            }
+            }}
         });
 // console.log(mutualArray)
 
@@ -60,7 +57,7 @@ run: async(req, res) => {
             adminGuilds:mutualArray,
             guild:gId
         }
-        res.render("./Website/html/guild.ejs", servers);
+        res.render("./Website/html/server.ejs", servers);
     } else
         res.redirect("/login");
 }
