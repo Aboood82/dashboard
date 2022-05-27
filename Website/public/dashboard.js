@@ -27,6 +27,7 @@ run: async(req, res) => {
 
         let guildArray = await process.oauth.getUserGuilds(data.access_token);
         // console.log(guildArray)
+      let stst = false;
         let mutualArray = [];
         guildArray.forEach(g => {
             if (client.guilds.cache.has(g.id)) {
@@ -42,34 +43,31 @@ run: async(req, res) => {
                 // console.log(data.userID)
                 let user = guildd.members.cache.get(data.userID);
                 // console.log(user.username)
+              if (user === undefined) {
+                //  stst = `no guilds`;
+                // mutualArray.push(stst);
+                // console.log("hello")
+              } else{
                 if (user.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {
                     // console.log("user has perms")
                  mutualArray.push(g);
                 //  console.log(mutualArray)
                 }
-            }
+            }}
         });
-// console.log(mutualArray)
-        let args = {
-            avatar: `https://cdn.discordapp.com/avatars/${data.userID}/${data.user.avatar}.png`,
-            username: data.user.username,
-            discriminator: data.user.discriminator,
-            id: data.userID,
-            loggedIN: true,
-            adminGuilds: mutualArray,
-        };
-        let servers = {
-            avatar: `https://cdn.discordapp.com/avatars/${data.userID}/${data.user.avatar}.png`,
-            username: data.user.username,
-            discriminator: data.user.discriminator,
-            id: data.userID,
-            loggedIN: true,
-            adminGuilds:mutualArray
-        }
+      
+let args = {
+                avatar: `https://cdn.discordapp.com/avatars/${data.userID}/${data.user.avatar}.png`,
+                username: data.user.username,
+                discriminator: data.user.discriminator,
+                id: data.userID,
+                loggedIN: true,
+                adminGuilds: mutualArray,
+            };
+       
 
         res.render("./Website/html/dashboard.ejs", args);
-        // res.render("./Website/html/guild.ejs", servers);
-    } else
+                                                                             }  else
         res.redirect("/login");
 }
 }
