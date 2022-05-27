@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="stylesheet" href="../css/server.css">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+    <title>server</title>
+</head>
+
+<body>
+  <p id="thisg" style="display:none;"> <%= guild.id%> </p>
+    <p> You're reviewing <%= guild.name%> |  <%= username%>#<%= discriminator%> </p><br>
+    <!-- <p></p> -->
+
+    <!-- <% if (updatedPrefix) { %>
+        <p style="color:green"> Seccess to <%guild.prefix%> </p>
+        <% } %>
+        <br><br> -->
+        
+
+
+
+
+<div class="commands_container__xLyor"><div><div class="commands_texts__TGLSU"><div class="d-flex"><h5>$rubby</h5> </div><h6>Shows user balance.</h6></div>
+<div class="commands_edit__0qJOU undefined"><button onclick="rubby_show_hide()" id="rubby-edit-btn"><img src="../css/imgs/edit-icon.png" alt="edit-image"> Edit</button><div class="dramexSwi" style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 15px; transition: opacity 0.25s ease 0s; touch-action: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;"><div class="react-switch-bg" style="height: 30px; width: 60px; margin: 0px; position: relative; background: rgb(88, 101, 242); border-radius: 15px; cursor: pointer; transition: background 0.25s ease 0s;"></div><div class="react-switch-handle" style="height: 27px; width: 27px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(31.5px); top: 1.5px; outline: 0px; box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 5px; border: 0px; transition: background-color 0.25s ease 0s, transform 0.25s ease 0s, box-shadow 0.15s ease 0s;"></div><input type="checkbox" role="switch" aria-checked="true" aria-label="reaction role" id="material-switch" value="true" checked="" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"></div></div></div><div></div></div>
+
+<div class="commands_container__xLyor"><div><div class="commands_texts__TGLSU"><div class="d-flex"><h5>$gift</h5> </div><h6>Shows user balance.</h6></div>
+<div class="commands_edit__0qJOU undefined"><button onclick="gift_show_hide()" id="gift-edit-btn"><img src="../css/imgs/edit-icon.png" alt="edit-image"> Edit</button><div class="dramexSwi" style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 15px; transition: opacity 0.25s ease 0s; touch-action: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;"><div class="react-switch-bg" style="height: 30px; width: 60px; margin: 0px; position: relative; background: rgb(88, 101, 242); border-radius: 15px; cursor: pointer; transition: background 0.25s ease 0s;"></div><div class="react-switch-handle" style="height: 27px; width: 27px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(31.5px); top: 1.5px; outline: 0px; box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 5px; border: 0px; transition: background-color 0.25s ease 0s, transform 0.25s ease 0s, box-shadow 0.15s ease 0s;"></div><input type="checkbox" role="switch" aria-checked="true" aria-label="reaction role" id="material-switch" value="true" checked="" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"></div></div></div><div></div></div>
+
+<div class="commands_container__xLyor"><div><div class="commands_texts__TGLSU"><div class="d-flex"><h5>$profile</h5> </div><h6>Shows user balance.</h6></div>
+<div class="commands_edit__0qJOU undefined"><button onclick="profile_show_hide()" id="profile-edit-btn"><img src="../css/imgs/edit-icon.png" alt="edit-image"> Edit</button><div class="dramexSwi" style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 15px; transition: opacity 0.25s ease 0s; touch-action: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;"><div class="react-switch-bg" style="height: 30px; width: 60px; margin: 0px; position: relative; background: rgb(88, 101, 242); border-radius: 15px; cursor: pointer; transition: background 0.25s ease 0s;"></div><div class="react-switch-handle" style="height: 27px; width: 27px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(31.5px); top: 1.5px; outline: 0px; box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 5px; border: 0px; transition: background-color 0.25s ease 0s, transform 0.25s ease 0s, box-shadow 0.15s ease 0s;"></div><input type="checkbox" role="switch" aria-checked="true" aria-label="reaction role" id="material-switch" value="true" checked="" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"></div></div></div><div></div></div>
+
+<div class="commands_container__xLyor"><div><div class="commands_texts__TGLSU"><div class="d-flex"><h5>$user</h5> </div><h6>Shows user balance.</h6></div>
+<div class="commands_edit__0qJOU undefined"><button onclick="user_show_hide()" id="user-edit-btn"><img src="../css/imgs/edit-icon.png" alt="edit-image"> Edit</button><div class="dramexSwi" style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 15px; transition: opacity 0.25s ease 0s; touch-action: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;"><div class="react-switch-bg" style="height: 30px; width: 60px; margin: 0px; position: relative; background: rgb(88, 101, 242); border-radius: 15px; cursor: pointer; transition: background 0.25s ease 0s;"></div><div class="react-switch-handle" style="height: 27px; width: 27px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(31.5px); top: 1.5px; outline: 0px; box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 5px; border: 0px; transition: background-color 0.25s ease 0s, transform 0.25s ease 0s, box-shadow 0.15s ease 0s;"></div><input type="checkbox" role="switch" aria-checked="true" aria-label="reaction role" id="material-switch" value="true" checked="" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"></div></div></div><div></div></div>
+<!-- <div class="commands_edit__0qJOU undefined"><button onclick="rubby_show_hide()" id="rubby-edit-btn"><img src="../css/imgs/edit-icon.png" alt="edit-image"> Edit</button><div class="dramexSwi" style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 15px; transition: opacity 0.25s ease 0s; touch-action: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;"><div class="react-switch-bg" style="height: 30px; width: 60px; margin: 0px; position: relative; background: rgb(88, 101, 242); border-radius: 15px; cursor: pointer; transition: background 0.25s ease 0s;"></div><div class="react-switch-handle" style="height: 27px; width: 27px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(31.5px); top: 1.5px; outline: 0px; box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 5px; border: 0px; transition: background-color 0.25s ease 0s, transform 0.25s ease 0s, box-shadow 0.15s ease 0s;"></div><input type="checkbox" role="switch" aria-checked="true" aria-label="reaction role" id="material-switch" value="true" checked="" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"></div></div></div><div></div></div> -->
+<!-- <div class="commands_edit__0qJOU undefined"><button onclick="rubby_show_hide()" id="rubby-edit-btn"><img src="../css/imgs/edit-icon.png" alt="edit-image"> Edit</button><div class="dramexSwi" style="position: relative; display: inline-block; text-align: left; opacity: 1; direction: ltr; border-radius: 15px; transition: opacity 0.25s ease 0s; touch-action: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none;"><div class="react-switch-bg" style="height: 30px; width: 60px; margin: 0px; position: relative; background: rgb(88, 101, 242); border-radius: 15px; cursor: pointer; transition: background 0.25s ease 0s;"></div><div class="react-switch-handle" style="height: 27px; width: 27px; background: rgb(255, 255, 255); display: inline-block; cursor: pointer; border-radius: 50%; position: absolute; transform: translateX(31.5px); top: 1.5px; outline: 0px; box-shadow: rgba(0, 0, 0, 0.6) 0px 1px 5px; border: 0px; transition: background-color 0.25s ease 0s, transform 0.25s ease 0s, box-shadow 0.15s ease 0s;"></div><input type="checkbox" role="switch" aria-checked="true" aria-label="reaction role" id="material-switch" value="true" checked="" style="border: 0px; clip: rect(0px, 0px, 0px, 0px); height: 1px; margin: -1px; overflow: hidden; padding: 0px; position: absolute; width: 1px;"></div></div></div><div></div></div> -->
+
+
+<div id="edit-div" style="display:none;">
+  <div class="container">
+    <div class="select-box">
+  <div class="options-container">
+  <form action="">
+    <!-- <label  for="select-color">Select Color:</label>-->
+     <!-- <select name="color" id="op"> -->
+      <option selected disabled></option>
+      <% guild.roles.cache.forEach(role => { %>
+      <div class="option" id="op">
+      <label><%=role.name%></label>
+    </div>
+    <% }) %>
+
+    <!-- <output for="op"></output> -->
+  </form>
+</div>
+  
+
+<div class="selected">
+  Select Role
+</div>
+
+</div>
+</div>
+
+  <button onclick="postInfo()">SAVE</button>
+
+</div>
+
+
+
+
+<script src="../js/mymain.js"></script>
+
+
+</body>
+</html>
